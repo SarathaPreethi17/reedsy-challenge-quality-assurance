@@ -1,5 +1,5 @@
 Write up any bugs you find, as if you're raising a ticket:
-
+**************************************************************
 Defect 1: Funtional issue
 Description/Summary:
 When searching for the exact title of a book in the search field, no results are displayed.
@@ -136,27 +136,52 @@ On page 2, some book images are missing or appear broken, while all images displ
 
 Defect 8: Missing Total Page Count in Pagination Footer
 Description/Summary:
-The pagination footer in the Bookshelf app does not display information such as "Page X of Y". Without this, users cannot tell how many pages of content exist or how far they are into the listing, leading to poor navigation and user experience.
+The pagination footer in the Bookshelf app does not display information such as "Page X of Y". Without this, 
+users cannot tell how many pages of content exist or how far they are into the listing, leading to poor navigation and user experience.
 
 Steps to Reproduce:
-
-Launch the Bookshelf app in a browser.
-
-Navigate to the book listings or search results page.
-
-Scroll to the bottom of the page to view the pagination controls.
-
-Observe the pagination footer and available information.
+1.Launch the Bookshelf app in a browser.
+2.Navigate to the book listings or search results page.
+3.Scroll to the bottom of the page to view the pagination controls.
+4.Observe the pagination footer and available information.
 
 Expected Behavior:
 The pagination section should display the current page number and the total number of pages, e.g., "Page 2 of 10". This gives users clear context about their position in the dataset.
 
 Actual Behavior:
-The pagination only shows next/previous or numbered page links, but does not indicate the total number of pages (e.g., “Page 2 of X”), leaving users uncertain about the scope of content.
+The pagination only shows numbered pages, but does not indicate the total number of pages (e.g., “Page 2 of X”), leaving users uncertain about the scope of content.
 ****************************************************************************************************************************************************************************
+Defect 9: Page 0 Displayed – Logical Inconsistency in Pagination
+Description/Summary:
+The pagination system in the Bookshelf app displays "Page 0", which is not standard in user-facing applications. Pagination typically starts from Page 1. Displaying Page 0 creates a logical inconsistency and may confuse users, as it's unclear whether it indicates an error, an empty state, or a misconfiguration.
 
+Steps to Reproduce:
+1.Launch the Bookshelf app in a browser.
+2.Navigate to the book listings or search results page.
+3.Observe the pagination controls at the bottom of the page.
+4.Note the current page indicator or the first page in the sequence.
+
+Expected Behavior:
+Pagination should start from Page 1, following common conventions. Users should see "Page 1", "Page 2", etc., with no reference to "Page 0".
+
+Actual Behavior:
+The application displays "Page 0" as the starting page, which is non-standard and confusing to users. It may also suggest a potential issue in the pagination logic.
 ****************************************************************************************************************************************************************************
+Defect 10: Page 0 Accessible via Pagination – Invalid Page Navigation
+Description/Summary:
+Although the Bookshelf app correctly launches on Page 1, clicking the "<" (Previous) button in the pagination footer from Page 1 navigates the user to Page 0, which should not exist. This is a logical and usability defect, as user-facing pagination should never expose or allow access to a non-existent Page 0.
 
+Steps to Reproduce:
+1.Launch the Bookshelf app in a browser.
+2.Confirm that the book listing starts on Page 1.
+3.In the pagination footer, click the "<" (Previous) button while on Page 1.
+4.Observe the page number and content.
+
+Expected Behavior:
+When on Page 1, the "<" (Previous) button should be disabled or non-functional, preventing navigation to any page before Page 1.
+
+Actual Behavior:
+Clicking the "<" (Previous) button on Page 1 takes the user to Page 0, which is not a valid or standard page and results in confusion or potentially empty/erroneous content.
 ****************************************************************************************************************************************************************************
 
 
@@ -171,7 +196,7 @@ Mobile view - M -375 px
 The Book thumnail images are breaking and not visible completely with two columns or re
 
 
-****************************************************************************************************************************************************************************
+***************************************************************************************************************************************************************************************
  Even if they're not strictly bugs, flag any parts of the UI/UX that feel like they could be improved, and provide a possible suggestion:
 
 Defect 1:  Missing Sort Options – "Newest" / "Bestselling" / "Popularity"
@@ -194,10 +219,13 @@ These help users quickly find relevant or trending books.
 Actual Behavior:
 The sort dropdown only includes basic or limited options (e.g., "Title", "ID", "Author", "Rating"), and lacks important filters like Newest, Bestselling, or Popularity,
 reducing the effectiveness of search and discovery.
+***************************************************************************************************************************************************************************************
 
+No Direct Page Selection/Jump: Users cannot jump to a specific page (e.g., Page 1, Page 5, Page 10) directly. This forces sequential navigation, which is inefficient for many pages.
 
+***************************************************************************************************************************************************************************************
 
-
+No "Next/Previous" Labels: While < and > are present, explicit "Previous" and "Next" text or clearer buttons are standard for usability.
 
 
 
