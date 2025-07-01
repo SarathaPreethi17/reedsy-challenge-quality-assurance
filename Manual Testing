@@ -1,0 +1,208 @@
+Write up any bugs you find, as if you're raising a ticket:
+
+Defect 1: Funtional issue
+Description/Summary:
+When searching for the exact title of a book in the search field, no results are displayed.
+
+Steps to Reproduce:
+1.Launch the Bookshelf app in a browser.
+2.Enter the exact title of a known book into the search field.
+3.Observe the search results.
+
+Expected Behavior:
+The book should appear in the search results when its exact title is entered.
+
+Actual Behavior:
+The search results are blank, even when the exact title of the book is entered.
+
+Test Data: The Outsiders
+Test Environment: QA
+Test Device: Chrome browser, Desktop version
+
+*****************************************************************************************************************************************************
+Defect 2: Funtional issue
+Description/Summary: When sorting by title, the page refreshes, but the books are not displayed in either ascending or descending order.
+
+Steps to Reproduce:
+1.Launch the Bookshelf app in a browser.
+2.Click on the sort dropdown and select the "Title" option.
+3.Observe the results after the page refreshes.
+
+Expected Behavior:
+After selecting "Title" from the sort dropdown, the page should refresh and display all books sorted in either ascending or descending order by title.
+
+Actual Behavior:
+The page refreshes, but the books are not sorted correctly by title they do not appear in either ascending or descending order.
+Test Environment: QA
+Test Device: Chrome browser, Desktop version
+**************************************************************************************************************************************************************************
+
+Defect 3: Navigation Issue – Missing Back Button
+Description/Summary: When clicking on any book, the system navigates to the book details page. However, there is no back button to return to the original list/search results page.
+
+Steps to Reproduce:
+1.Launch the Bookshelf app in a browser.
+2.Perform a search or browse the list of available books.
+3.Click on any book to view its details.
+4.Observe the book details page for navigation options.
+
+Expected Behavior:
+After navigating to the book details page, there should be a visible and functional Back button to return to the previous page (search results or book list).
+
+Actual Behavior:
+The system navigates to the book details page, but there is no back button to return to the previous page.
+Test Environment: QA
+Test Device: Chrome browser, Desktop version
+**************************************************************************************************************************************************************************
+
+Defect 4: Sort Functionality – Incomplete Options / Incorrect Logic
+Description/Summary: 
+The "ID" sort option appears in the sorting dropdown, but sorting by ID is not meaningful or useful in a user-facing context.
+It seems to reflect an internal system identifier rather than something relevant to users. This may be a design flaw or an unnecessary option unless explicitly intended for administrative use.
+
+Steps to Reproduce:
+
+1.Launch the Bookshelf app in a browser.
+2.Navigate to the book listing or search results page.
+3.Open the sort dropdown.
+4.Select the "ID" sorting option.
+
+Expected Behavior:
+Sorting options should be relevant and meaningful to end users, such as sorting by Title, Author, Published Date, or Rating. If ID is included,
+it should be clearly explained or reserved for admin-only views.
+
+Actual Behavior:
+The sort dropdown includes "ID" as a sorting option, which is unclear and not useful to general users. It may confuse users who do not understand the purpose of internal IDs.
+Test Environment: QA
+Test Device: Chrome browser, Desktop version
+**************************************************************************************************************************************************************************
+
+Defect 5: UI/UX issues:
+Description/Summary: 
+When a search yields no matching results, the page does not display a user-friendly "No results found" message. 
+Instead, it shows a blank or empty state, which can confuse users and lead them to believe the search is broken.
+
+Steps to Reproduce:
+1.Launch the Bookshelf app in a browser.
+2.Navigate to the search field.
+3.Enter a random or non-existent book title (e.g. xyz123book).
+4.Observe the search results page.
+
+Expected Behavior:
+If no matching books are found, the application should display a clear and friendly message such as "No results found", 
+possibly with suggestions (e.g., "Try a different keyword" or "Check your spelling").
+
+Actual Behavior:
+When the search returns no matches, the page is blank with no indication that the search completed or that no results were found.
+**************************************************************************************************************************************************************************
+Defect 6: UI/UX issues:
+Description/Summary:
+The search input field is visible at the top of the page in the Bookshelf app, but it lacks a search icon or placeholder text. 
+This may confuse users, as it's not immediately clear that the field is for searching, reducing usability and discoverability.
+
+Steps to Reproduce:
+
+1.Launch the Bookshelf app in a browser.
+2.Observe the top section of the page where the search input field is located.
+3.Note the absence of a search icon or label within or near the field.
+4.Attempt to interact with the field without clear context.
+
+Expected Behavior:
+The search input field should include a search icon (e.g., a magnifying glass) and/or placeholder text like "Search for books..." to clearly indicate its purpose to the user.
+
+Actual Behavior:
+The search input field is present but has no icon or label, making it unclear to users that it is intended for entering search queries.
+
+****************************************************************************************************************************************************************************
+Defect 7: Missing Images on Page 2 of Book Listings
+Description/Summary:
+While all book images load correctly on page 1 of the book listings in the Bookshelf app, some images are missing or broken on page 2. 
+This results in an inconsistent user experience and may lead users to believe the content is incomplete or the application is malfunctioning.
+
+Steps to Reproduce:
+
+1.Launch the Bookshelf app in a browser.
+2.Navigate to the book listings or search results.
+3.Scroll to or navigate to page 2 of the listings.
+4.Observe the book thumbnails/images displayed.
+
+Expected Behavior:
+All book images should load correctly and consistently across all pages of the book listings, including page 2 and beyond.
+
+Actual Behavior:
+On page 2, some book images are missing or appear broken, while all images display correctly on page 1. This creates a perception of incomplete or poor-quality data.
+
+****************************************************************************************************************************************************************************
+
+Defect 8: Missing Total Page Count in Pagination Footer
+Description/Summary:
+The pagination footer in the Bookshelf app does not display information such as "Page X of Y". Without this, users cannot tell how many pages of content exist or how far they are into the listing, leading to poor navigation and user experience.
+
+Steps to Reproduce:
+
+Launch the Bookshelf app in a browser.
+
+Navigate to the book listings or search results page.
+
+Scroll to the bottom of the page to view the pagination controls.
+
+Observe the pagination footer and available information.
+
+Expected Behavior:
+The pagination section should display the current page number and the total number of pages, e.g., "Page 2 of 10". This gives users clear context about their position in the dataset.
+
+Actual Behavior:
+The pagination only shows next/previous or numbered page links, but does not indicate the total number of pages (e.g., “Page 2 of X”), leaving users uncertain about the scope of content.
+****************************************************************************************************************************************************************************
+
+****************************************************************************************************************************************************************************
+
+****************************************************************************************************************************************************************************
+
+
+ Test across multiple devices and browsers, and include this information where relevant:
+Defect 1: Mobile version - size S-320px and M -375 px (Dev tools)
+Sort dropdown is not visible and not able to perform any sort actions in mobile view
+****************************************************************************************************************************************************************************
+Search button is lengthy and not fitting in the mobile size
+
+****************************************************************************************************************************************************************************
+Mobile view - M -375 px
+The Book thumnail images are breaking and not visible completely with two columns or re
+
+
+****************************************************************************************************************************************************************************
+ Even if they're not strictly bugs, flag any parts of the UI/UX that feel like they could be improved, and provide a possible suggestion:
+
+Defect 1:  Missing Sort Options – "Newest" / "Bestselling" / "Popularity"
+Description/Summary:
+The Bookshelf app's sort functionality lacks commonly expected sorting options such as "Newest", "Bestselling", or "Popularity". 
+These are standard in most book-related applications and enhance user experience by helping users discover trending or recent content. 
+Their absence limits how effectively users can browse the catalog.
+
+Steps to Reproduce:
+
+1.Launch the Bookshelf app in a browser.
+2.Navigate to the book listing or search results page.
+3.Open the sort dropdown 
+4.Review the available sorting options.
+
+Expected Behavior:
+The sort dropdown should include commonly used options like: Newest (by publication date),Bestselling,Most Popular or Most Viewed.
+These help users quickly find relevant or trending books.
+
+Actual Behavior:
+The sort dropdown only includes basic or limited options (e.g., "Title", "ID", "Author", "Rating"), and lacks important filters like Newest, Bestselling, or Popularity,
+reducing the effectiveness of search and discovery.
+
+
+
+
+
+
+
+
+
+
+
+
