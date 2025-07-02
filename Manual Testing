@@ -19,7 +19,7 @@ Test Data: The Outsiders
 Test Environment: QA
 Test Device: Chrome browser, Desktop version
 
-*****************************************************************************************************************************************************
+**********************************************************************************************************************************************************************************
 Defect 2: Funtional issue
 Description/Summary: When sorting by title, the page refreshes, but the books are not displayed in either ascending or descending order.
 
@@ -75,7 +75,7 @@ Actual Behaviour:
 The sort dropdown includes "ID" as a sorting option, which is unclear and not useful to general users. It may confuse users who do not understand the purpose of internal IDs.
 Test Environment: QA
 Test Device: Chrome browser, Desktop version
-**************************************************************************************************************************************************************************
+***************************************************************************************************************************************************************************************
 
 Defect 5: UI/UX issues:
 Description/Summary: 
@@ -154,7 +154,8 @@ The pagination only shows numbered pages, but does not indicate the total number
 
 Defect 9: Page 0 Displayed – Logical Inconsistency in Pagination
 Description/Summary:
-The pagination system in the Bookshelf app displays "Page 0", which is not standard in user-facing applications. Pagination typically starts from Page 1. Displaying Page 0 creates a logical inconsistency and may confuse users, as it's unclear whether it indicates an error, an empty state, or a misconfiguration.
+The pagination system in the Bookshelf app displays "Page 0", which is not standard in user-facing applications. Pagination typically starts from Page 1. Displaying Page 0 creates a 
+logical inconsistency and may confuse users, as it's unclear whether it indicates an error, an empty state, or a misconfiguration.
 
 Steps to Reproduce:
 1.Launch the Bookshelf app in a browser.
@@ -168,9 +169,29 @@ Pagination should start from Page 1, following common conventions. Users should 
 Actual Behaviour:
 The application displays "Page 0" as the starting page, which is non-standard and confusing to users. It may also suggest a potential issue in the pagination logic.
 ****************************************************************************************************************************************************************************
-Defect 10: Page 0 Accessible via Pagination – Invalid Page Navigation
+Defect 10: Second Row Book Thumbnails Are Truncated/Cut Off
 Description/Summary:
-Although the Bookshelf app correctly launches on Page 1, clicking the "<" (Previous) button in the pagination footer from Page 1 navigates the user to Page 0, which should not exist. This is a logical and usability defect, as user-facing pagination should never expose or allow access to a non-existent Page 0.
+On the Books page of the Bookshelf app, the book thumbnails in the second row are not fully visible. They appear to be truncated or cut off, preventing users from seeing the complete 
+book cover images. This affects visual clarity and reduces the overall quality of the browsing experience.
+
+Steps to Reproduce:
+1. Launch the Bookshelf app in a browser.
+2.View the Books page (or the specific section where the issue appears).
+3.Dont Scroll to view the second row of book thumbnails.
+4.Observe the visibility and layout of the book cover images.
+
+Expected Behaviour:
+All book thumbnails should be fully visible and correctly displayed within their containers, showing the entire book cover without any cropping or truncation.
+
+Actual Behaviour:
+Book thumbnails in the second row are cut off or partially displayed, making it difficult for users to recognize or identify the books properly.
+
+****************************************************************************************************************************************************************************
+
+Defect 11: Page 0 Accessible via Pagination – Invalid Page Navigation
+Description/Summary:
+Although the Bookshelf app correctly launches on Page 1, clicking the "<" (Previous) button in the pagination footer from Page 1 navigates the user to Page 0, which should not exist. 
+This is a logical and usability defect, as user-facing pagination should never expose or allow access to a non-existent Page 0.
 
 Steps to Reproduce:
 1.Launch the Bookshelf app in a browser.
@@ -184,13 +205,14 @@ When on Page 1, the "<" (Previous) button should be disabled or non-functional, 
 Actual Behaviour:
 Clicking the "<" (Previous) button on Page 1 takes the user to Page 0, which is not a valid or standard page and results in confusion or potentially empty/erroneous content.
 ****************************************************************************************************************************************************************************
-Defect 11: Inconsistent Information Placement on Book Detail Pages
+Defect 12: Inconsistent Information Placement on Book Detail Pages
 Description/Summary:
 There is a UI inconsistency in how core information (title, author, user rating) is displayed on the Book Detail pages in the Bookshelf app.
 The layout varies between different books, suggesting either a missing standardized template or inconsistent rendering logic. 
 This inconsistency negatively affects usability and the overall user experience.
 
 Steps to Reproduce:
+
 1.Launch the Bookshelf app in a browser.
 2.Search for or navigate to the Book Detail page for The Outsiders.
 3.Observe that the title, author, and user rating are positioned to the right of the book cover.
@@ -209,7 +231,7 @@ This inconsistent placement and missing data lead to a confusing and unprofessio
 
 
 ****************************************************************************************************************************************************************************
-Defect 12: Inconsistent Font Size and Style/Weight on Book Detail Pages
+Defect 13: Inconsistent Font Size and Style/Weight on Book Detail Pages
 Description/Summary:
 There is a UI inconsistency in the font size, style, and weight used for displaying book titles, authors, and user ratings across different Book Detail pages in the Bookshelf app. 
 These inconsistencies suggest a lack of standardized typography guidelines or inconsistent application of CSS styles, leading to a poor and unprofessional user experience.
@@ -226,8 +248,7 @@ Steps to Reproduce:
 
 Expected Behaviour:
 All Book Detail pages should use consistent font sizes, styles, and weights for similar content:
-Book titles should have the same font size and weight (e.g., large and bold).
-Author names should have a consistent, slightly smaller style.
+Book titles should have the same font size and weight (e.g., large and bold).Author names should have a consistent, slightly smaller style.
 User ratings, if present, should follow the same style and placement across pages.
 
 Actual Behaviour:
@@ -238,11 +259,9 @@ The title is smaller and less bold.The author is also smaller, and the user rati
 These inconsistencies result in uneven visual hierarchy, reduced readability, and a disjointed user experience.
 
 ****************************************************************************************************************************************************************************
-
-****************************************************************************************************************************************************************************
 Test across multiple devices and browsers, and include this information where relevant:
 
-Defect 13: Sort Dropdown field Not Visible on Mobile View (Sizes S - 320px & M - 375px)
+Defect 14: Sort Dropdown field Not Visible on Mobile View (Sizes S - 320px & M - 375px)
 Description/Summary:
 In the Bookshelf app, when viewed on mobile screen sizes of 320px (S) and 375px (M) (as tested via developer tools), the Sort dropdown is not visible. 
 Consequently, users are unable to perform any sorting actions, which limits usability on mobile devices.
@@ -260,7 +279,7 @@ The Sort dropdown should be fully visible and functional on all screen sizes, in
 Actual Behaviour:
 On screen widths of 320px and 375px, the Sort dropdown is not visible or accessible, preventing users from sorting the book list on mobile devices.
 ****************************************************************************************************************************************************************************
-Defect 14: Search Button Length Exceeds Screen Width on Mobile (320px & 375px)
+Defect 15: Search Button Length Exceeds Screen Width on Mobile (320px & 375px)
 Description/Summary:
 In the Bookshelf app, when viewed on mobile screen sizes of 320px (S) and 375px (M) (as tested via developer tools),
 the Search button is too long and does not fit properly within the screen width. This causes layout issues and may affect usability.
@@ -277,8 +296,8 @@ The Search button should be appropriately sized and fully visible within the vie
 Actual Behaviour:
 The Search button is lengthy and exceeds the available width on screens sized 320px and 375px, causing it to not fit properly within the mobile view.
 
-****************************************************************************************************************************************************************************
-Defect 15: Book Thumbnail Images Broken and Partially Visible in Mobile View (375px)
+**************************************************************************************************************************************************************************************
+Defect 16: Book Thumbnail Images Broken and Partially Visible in Mobile View (375px)
 Description/Summary:
 In the Bookshelf app, when viewed on mobile screen size 375px (M), the book thumbnail images in the two-column layout are breaking and only partially visible. 
 This results in poor visual presentation and affects the user’s ability to recognize books.
@@ -296,8 +315,8 @@ Actual Behaviour:
 At 375px width, book thumbnails in the two-column layout are broken and partially displayed, with images cropped or cut off, leading to a distorted and unclear display.
 
 
-***************************************************************************************************************************************************************************************
- Even if they're not strictly bugs, flag any parts of the UI/UX that feel like they could be improved, and provide a possible suggestion:
+****************************************************************************************************************************************************************************************
+Even if they're not strictly bugs, flag any parts of the UI/UX that feel like they could be improved, and provide a possible suggestion:
 
 Suggestion 1:  Missing Sort Options – "Newest" / "Bestselling" / "Popularity"
 Description/Summary:
@@ -350,7 +369,7 @@ Steps to Reproduce:
 3.Navigate to the Book Detail page by clicking on the book.
 4.Observe the information displayed.
 
-Expected Behavior:
+Expected Behaviour:
 The Book Detail page should include:
 
 A full description/synopsis of the book.
@@ -361,8 +380,9 @@ The book's ISBN number
 Page count
 A brief author biography and/or a link to the author’s page showing other works.
 
-Actual Behavior:
-The Book Detail page currently shows only minimal information (e.g., title and author name), while omitting most key metadata and content elements expected by users. This results in a poor and incomplete user experience.
+Actual Behaviour:
+The Book Detail page currently shows only minimal information (e.g., title and author name), while omitting most key metadata and content elements expected by users.
+This results in a poor and incomplete user experience.
 
 ***************************************************************************************************************************************************************************************
 Suggestion 5:
@@ -393,7 +413,8 @@ If applicable, a way to read a portion of the book. Providing a seamless and fas
 Suggestion 9:
 
 Related Books/Recommendations:
-Suggesting similar or related books helps users discover new content. Suggestion: Personalizing recommendations based on user preferences or reading history can significantly improve relevance and retention.
+Suggesting similar or related books helps users discover new content. 
+Personalizing recommendations based on user preferences or reading history can significantly improve relevance and retention.
 ***************************************************************************************************************************************************************************************
 Suggestion 10:
 
@@ -409,16 +430,11 @@ Suggestion 12:
 No Navigation Bar/Header: While it's a detail page, a consistent header with the app's logo, search, or other main navigation links would improve usability and branding.
 ***************************************************************************************************************************************************************************************
 Suggestion 13:
-Accessibility (Inferred):
+Accessibility check:
 
 All interactive elements should be fully keyboard navigable to ensure users who rely on keyboards can easily access all features.
 My suggestion is to Implement and test keyboard focus states and tab order throughout the app.
 
-Every book cover image must include meaningful alt text to support screen readers and visually impaired users.
-My suggestion is to Add descriptive alt attributes that clearly identify the book title and author.
-
-Text elements should maintain sufficient color contrast against their backgrounds to be easily readable by users with visual impairments.
-My suggestion is to Use contrast checking tools to verify compliance with WCAG guidelines and adjust colors as needed.
 **************************************************************************************************************************************************************************************
 Suggestion 14:
 
@@ -426,3 +442,18 @@ Favicon (Browser Tab): The generic globe favicon in the browser tabs might indic
 which is a minor branding/UX oversight.
 
 ***************************************************************************************************************************************************************************************
+Suggestion 15: 
+Branded Loading Animation:
+
+* If a skeleton screen is too complex for now, enhance the loading spinner itself.Larger, Centered Spinner: Make the spinner more prominent and ensure it's visually centered.
+
+* Custom Spinner that is Use a unique, branded loading animation that ties into your bookshelf theme (e.g., a rotating book icon, an opening page animation).
+
+* Add friendly text below the spinner like "Loading book details...", "Fetching your book...", or "Just a moment..."
+
+***************************************************************************************************************************************************************************************
+
+
+
+
+
