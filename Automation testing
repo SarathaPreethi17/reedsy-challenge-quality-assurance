@@ -1,0 +1,56 @@
+Automated testing:
+Please write some automated end-to-end tests for this app.
+
+You should:
+
+ include simple instructions for running the tests, including installing any tools
+ write failing tests for the two highest priority bugs
+ explain why these are the highest priority bugs
+ write a passing test for a working feature
+ explain why this passing test is worthwhile
+ write robust, maintainable tests
+ should not rely on the test environment having stable data
+
+You may:  use any automated testing tools you like
+
+***************************************************************************************************************************************************************************************
+Automation Script 1:
+
+Description/Summary: When searching for the exact title of a book in the search field, no results are displayed.
+
+Why This is a High-Priority Bug? 
+This defect is considered a critical, high-priority bug for several reasons:
+
+* Search is a fundamental and expected feature of any application dealing with a collection of items (like books). 
+* If users cannot find items by their exact title, the primary purpose of the app is severely undermined.
+* Users expect search to be reliable and accurate.
+* When an exact match yields no results, it leads to significant frustration, distrust in the application, and a perception of the app being broken or incomplete. 
+* Even if books are correctly stored in the database,a broken search mechanism makes them effectively inaccessible to the user.
+* This negates the value of having the book data in the first place.
+* If users cannot easily find what they're looking for, they are likely to abandon the application.
+
+
+Test Setup and Running Instructions:
+To set up and run these tests, need Visual Studio and a few NuGet packages.
+
+1. Prerequisites:
+
+* Install Visual Studio and Ensure you have the ".NET desktop development" workload installed.
+* The project will target .NET Framework 8.0.
+
+2. Project Setup in Visual Studio:
+
+Create a New Project-> Open Visual Studio->Select "Create a new project".
+choosing "Class Library", name it BookshelfApp -> Select a .NET Framework version (8.0). 
+
+Install NuGet Packages:
+Right-click on your project in Solution Explorer and select "Manage NuGet Packages...".
+Go to the "Browse" tab and search for and install the following packages:
+* SpecFlow
+* SpecFlow.NUnit
+* Selenium.WebDriver
+* Selenium.WebDriver.ChromeDriver 
+* NUnit 
+* NUnit3TestAdapter 
+
+
