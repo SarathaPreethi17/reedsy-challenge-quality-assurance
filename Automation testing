@@ -14,21 +14,49 @@ You should:
 You may:  use any automated testing tools you like
 
 ***************************************************************************************************************************************************************************************
-Automation Script 1:
+Automation Script 1: Failing Test
 
 Description/Summary: When searching for the exact title of a book in the search field, no results are displayed.
 
-Why This is a High-Priority Bug? 
-This defect is considered a critical, high-priority bug for several reasons:
+Why This is a High-Priority Bug? This defect is considered a critical, high-priority bug for below reasons:
 
 * Search is a fundamental and expected feature of any application dealing with a collection of items (like books). 
-* If users cannot find items by their exact title, the primary purpose of the app is severely undermined.
-* Users expect search to be reliable and accurate.
+* If users cannot find items by their exact title, the primary purpose of the app is severely undermined. Users expect search to be reliable and accurate.
 * When an exact match yields no results, it leads to significant frustration, distrust in the application, and a perception of the app being broken or incomplete. 
 * Even if books are correctly stored in the database,a broken search mechanism makes them effectively inaccessible to the user.
 * This negates the value of having the book data in the first place.
 * If users cannot easily find what they're looking for, they are likely to abandon the application.
 
+
+***************************************************************************************************************************************************************************************
+
+Failing Test 2:
+Description: "Sort by Title Not Working" 
+This defect is also considered a critical, high-priority bug for the below reasons:
+
+* Users expect to be able to organize and filter lists of data. Sorting is a basic, essential feature for any application displaying multiple items.
+* Its failure makes the application feel incomplete and unprofessional. Without functional sorting, users cannot efficiently navigate or find specific books within a large collection.
+* This significantly degrades the usability and efficiency of the application, especially as the number of books grows.
+* Even if all books are present, the inability to sort them correctly means the application fails to provide a meaningful way to organize and present the data, which is a
+ core function of a "Bookshelf" app.
+* A broken sorting mechanism, especially one that visually refreshes but doesn't change the order, creates a strong impression of a buggy and poorly maintained application, 
+ leading to user dissatisfaction.
+
+***************************************************************************************************************************************************************************************
+Pass Test 3:
+In the Bookshelf app, navigating to a book's detail page and verifying its content is currently a passing test. 
+The scenario involves selecting a book such as The Outsiders from the list of books on the main page. 
+When the book is clicked, the app correctly navigates to the book's detail page, where the selected book’s information,
+including the title, author, and user rating, is accurately displayed.
+
+explaination of why this passing test is worthwhile:
+
+* A passing test for a working feature, such as navigating to a book's detail page and verifying its content, is valuable because it prevents regressions by acting as a safety net if future changes break the functionality.
+* It builds confidence in releases by ensuring that key features continue to work as expected.
+* It also serves as living documentation, showing how the application should behave from a user’s perspective. 
+* This test provides a stable foundation for future enhancements like editing book details or adding reviews. 
+* Lastly, it contributes to complete test coverage by validating critical user flows, not just failure points.
+*****************************************************************************************************************************************************************************************
 
 Test Setup and Running Instructions:
 To set up and run these tests, need Visual Studio and a few NuGet packages.
@@ -53,4 +81,4 @@ Go to the "Browse" tab and search for and install the following packages:
 * NUnit 
 * NUnit3TestAdapter 
 
-
+***************************************************************************************************************************************************************************************
