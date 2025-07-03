@@ -85,7 +85,7 @@ Instead, it shows a blank or empty state, which can confuse users and lead them 
 Steps to Reproduce:
 1.Launch the Bookshelf app in a browser.
 2.Navigate to the search field.
-3.Enter a random or non-existent book title (e.g. xyz123book).
+3.Enter a random or non-existent book title (e.g. xyz123book)
 4.Observe the search results page.
 
 Expected Behaviour:
